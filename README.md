@@ -9,34 +9,34 @@ A simple ERP module for managing employees and tracking daily attendance, built 
 
 ---
 
-## 📋 Features
+## 📋 Features (Planned)
 
 ### Employee Management
 
-- ✅ Add, update, delete employees
-- ✅ View employee list with search & filter
-- ✅ Upload employee photo (optional)
-- ✅ Employee fields: Name, Email, Phone, Department, Designation, Joining Date, Salary
+- [ ] Add, update, delete employees
+- [ ] View employee list with search & filter
+- [ ] Upload employee photo (optional)
+- [ ] Employee fields: Name, Email, Phone, Department, Designation, Joining Date, Salary
 
 ### Attendance Tracking
 
-- ✅ Mark daily attendance (Present / Absent / Leave)
-- ✅ Edit attendance records
-- ✅ View attendance by date or employee
-- ✅ Calendar or list view
+- [ ] Mark daily attendance (Present / Absent / Leave)
+- [ ] Edit attendance records
+- [ ] View attendance by date or employee
+- [ ] Calendar or list view
 
 ### Reports
 
-- ✅ Monthly summary per employee
-- ✅ Total present/absent/leave counts
-- ✅ Export to CSV
+- [ ] Monthly summary per employee
+- [ ] Total present/absent/leave counts
+- [ ] Export to CSV
 
 ---
 
 ## 🏗️ Project Structure
 
 ```
-EmployeeAttendanceSolution/
+EmployeeAttendanceManagement/
 │
 ├── Backend/
 │   ├── EmployeeAttendance.Domain/         # Entities & Enums
@@ -44,13 +44,17 @@ EmployeeAttendanceSolution/
 │   ├── EmployeeAttendance.Infrastructure/ # EF Core, Repositories
 │   └── EmployeeAttendance.API/            # Controllers, Configuration
 │
-└── Frontend/
-    └── employee-attendance-react/         # React + Vite
+└── Frontend/                              # React + Vite + TailwindCSS
+    └── src/
+        ├── components/                    # Reusable UI components
+        ├── pages/                         # Page components
+        ├── services/                      # API service layer
+        └── App.jsx                        # Main application
 ```
 
 ---
 
-## 🔌 API Endpoints
+## 🔌 API Endpoints (To Be Implemented)
 
 ### Employees
 
@@ -85,9 +89,8 @@ EmployeeAttendanceSolution/
 
 - React 18
 - Vite
-- Material UI
+- TailwindCSS
 - React Router
-- Axios
 
 ---
 
@@ -102,25 +105,24 @@ EmployeeAttendanceSolution/
 ### Backend
 
 ```bash
-cd Backend
+cd Backend/EmployeeAttendance.API
 dotnet restore
 dotnet build
 
 # Update connection string in appsettings.json
 # Run migrations
-dotnet ef database update --project EmployeeAttendance.Infrastructure --startup-project EmployeeAttendance.API
+dotnet ef database update --project ../EmployeeAttendance.Infrastructure
 
 # Run the API
-cd EmployeeAttendance.API
 dotnet run
 ```
 
-API will be available at: `https://localhost:5001`
+API will be available at: `https://localhost:7112`
 
 ### Frontend
 
 ```bash
-cd Frontend/employee-attendance-react
+cd Frontend
 npm install
 npm run dev
 ```
@@ -152,6 +154,12 @@ App will be available at: `http://localhost:5173`
 │           (Entities, Enums)              │
 └─────────────────────────────────────────┘
 ```
+
+---
+
+## 📝 Development Status
+
+This project is currently in active development. Test APIs have been removed and the actual Employee & Attendance management features are being implemented.
 
 ---
 
