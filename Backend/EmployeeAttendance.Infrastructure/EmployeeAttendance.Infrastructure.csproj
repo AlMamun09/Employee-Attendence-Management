@@ -20,4 +20,9 @@
     <ProjectReference Include="..\EmployeeAttendance.Application\EmployeeAttendance.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>
